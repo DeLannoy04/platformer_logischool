@@ -15,4 +15,14 @@ public class Weapon : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+
+    public void AttackStart()
+    {
+
+    }
+    public void AttackEnd()
+    {
+
+    }
 }

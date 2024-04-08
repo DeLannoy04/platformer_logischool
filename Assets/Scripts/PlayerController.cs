@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Movement(horizontalMovement, isJumping);
+
+        
     }
 
     void Movement(float movement, bool isJumping)
