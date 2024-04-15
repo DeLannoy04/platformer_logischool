@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private Weapon weapon;
     private bool isJumping;
     private Rigidbody2D rb;
 
@@ -26,7 +27,12 @@ public class PlayerController : MonoBehaviour
         if(horizontalMovement < 0 ) transform.localEulerAngles = new Vector3(0, 180, 0);
         else if(horizontalMovement > 0 ) transform.localEulerAngles = new Vector3(0, 0, 0);
 
-        if (Input.GetButtonDown("Jump")) isJumping = true;    
+        if (Input.GetButtonDown("Jump")) isJumping = true;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            weapon.Attack();
+        }
     }
 
     void FixedUpdate()
